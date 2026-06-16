@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南部鐵捲門電動門專業工程 | UV-C殺菌燈販售</title>
+    <meta name="description" content="南部地區專業鐵捲門、電動門安裝維修，UV-C殺菌燈販售，24小時緊急服務">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* 導航列 */
+        nav {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #ffd700;
+        }
+        
+        /* 首頁橫幅 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23333" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #ff6b35;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-size: 1.1rem;
+        }
+        
+        .btn:hover {
+            background: #e55a2b;
+        }
+        
+        /* 容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+        }
+        
+        /* 服務項目 */
+        .services {
+            background: #f8f9fa;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+        
+        /* 特色區塊 */
+        .features {
+            background: white;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .feature-item {
+            padding: 1.5rem;
+        }
+        
+        .feature-item .icon {
+            font-size: 2.5rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+        
+        /* 聯絡表單 */
+        .contact {
+            background: #f8f9fa;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        /* 頁尾 */
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem 20px;
+        }
+        
+        footer a {
+            color: #ffd700;
+        }
+        
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* 浮動聯絡按鈕 */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-weight: bold;
+            z-index: 999;
+        }
+        
+        .floating-contact:hover {
+            background: #20ba5a;
+        }
+    </style>
+</head>
+<body>
+    <!-- 導航列 -->
+    <nav>
+        <div class="container">
+            <div class="logo">🔧 南部工程服務</div>
+            <ul>
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#services">服務項目</a></li>
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#contact">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首頁橫幅 -->
+    <section class="hero" id="home">
+        <h1>南部專業工程服務</h1>
+        <p>鐵捲門 • 電動門 • UV-C殺菌燈 | 24小時緊急維修</p>
+        <a href="#contact" class="btn">立即諮詢</a>
+    </section>
+
+    <!-- 服務項目 -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>我們的服務</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="icon">🚪</div>
+                    <h3>鐵捲門工程</h3>
+                    <p>專業安裝、維修、保養各式鐵捲門</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>一般鐵捲門</li>
+                        <li>不銹鋼捲門</li>
+                        <li>防火捲門</li>
+                        <li>24小時緊急維修</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="icon">⚡</div>
+                    <h3>電動門系統</h3>
+                    <p>智能電動門安裝與整合服務</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>自動感應門</li>
+                        <li>遙控電動門</li>
+                        <li>門禁系統整合</li>
+                        <li>保固維修服務</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="icon">💡</div>
+                    <h3>UV-C殺菌燈</h3>
+                    <p>專業級UV-C紫外線殺菌設備</p>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>商業空間適用</li>
+                        <li>99.9%殺菌效果</li>
+                        <li>專業安裝建議</li>
+                        <li>多種規格選擇</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色優勢 -->
+    <section class="features">
+        <div class="container">
+            <h2>為什麼選擇我們</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="icon">🏆</div>
+                    <h3>專業團隊</h3>
+                    <p>10年以上經驗，技術精湛</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">⏰</div>
+                    <h3>快速服務</h3>
+                    <p>24小時緊急維修，快速到場</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">💰</div>
+                    <h3>價格透明</h3>
+                    <p>明碼標價，絕無額外收費</p>
+                </div>
+                <div class="feature-item">
+                    <div class="icon">✅</div>
+                    <h3>品質保證</h3>
+                    <p>提供保固，售後服務完善</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我們 -->
+    <section id="about" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>關於我們</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    我們是南部地區專業的工程服務團隊，專注於鐵捲門、電動門安裝維修，
+                    以及UV-C殺菌燈設備販售。秉持「品質第一、服務至上」的理念，
+                    為客戶提供最專業、最快速的服務。
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; margin-top: 1rem;">
+                    <strong>服務區域：</strong>台南、高雄、屏東及周邊地區
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡表單 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>聯絡我們</h2>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">姓名 *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">電話 *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">服務項目</label>
+                        <select id="service" name="service">
+                            <option value="">請選擇</option>
+                            <option value="鐵捲門">鐵捲門安裝/維修</option>
+                            <option value="電動門">電動門工程</option>
+                            <option value="UV-C">UV-C殺菌燈</option>
+                            <option value="其他">其他諮詢</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">需求說明</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; cursor: pointer;">送出諮詢</button>
+                </form>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="font-size: 1.2rem;"><strong>📞 服務專線：</strong> 0912-345-678</p>
+                <p style="font-size: 1.2rem;"><strong>📧 電子信箱：</strong> service@example.com</p>
+                <p style="font-size: 1.2rem;"><strong>🕐 服務時間：</strong> 24小時全年無休</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 南部工程服務. All Rights Reserved.</p>
+            <p>服務範圍：台南 | 高雄 | 屏東</p>
+        </div>
+    </footer>
+
+    <!-- 浮動聯絡按鈕 -->
+    <a href="https://line.me/ti/p/你的LINE ID" class="floating-contact" target="_blank">
+        💬 LINE諮詢
+    </a>
+
+    <script>
+        // 表單提交處理
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 獲取表單數據
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                service: document.getElementById('service').value,
+                message: document.getElementById('message').value
+            };
+            
+            // 這裡可以串接後端API或發送email
+            alert('感謝您的諮詢！我們會盡快與您聯繫。\n\n' + 
+                  '姓名：' + formData.name + '\n' +
+                  '電話：' + formData.phone);
+            
+            // 清空表單
+            this.reset();
+        });
+
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
